@@ -1,0 +1,35 @@
+.presentation-wrapper{
+    position: relative;
+    height: 50rem;
+    background-image: url(../../../../assets/pics/manicure.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    background-position: center;
+}
+
+.title{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: fit-content;
+}
+
+.title h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* @media(min-width:1024px){
+    .title{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 10px;
+        width: fit-content;
+    }
+    
+    .title h1{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+    }
+} */

@@ -1,0 +1,28 @@
+<div class="carousel-wrapper container">
+    <!-- Inner Container -->
+    <div class="container-fluid justify-content-center  py-3">
+        <!-- About the company-text -->
+        <div class="container about-text text-center pt-5">
+            <span><h4><b>Nail.Style</b></h4> Especializado en el Arte de las Uñas, se creo como parte de un proyecto en expansion con el objetivo de abarcar todas las aristas que realzan la belleza femenina. A traves de los conocimientos profesionales obtenidos, se lleva el mejor servicio a la cliente, utilizando las tecnicas mas modernas, los mejores productos del mercado y los precios mas competitivos, garantizando asi la satisfaccion y la permanencia junto a nuestra gran familia </span>
+        </div> <!--==========End About the company==============-->
+        
+        
+        <!-- Carousel -->
+        <div class="container slider-photos text-center bg-transparent">
+          <body>
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" checked />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <main id="carousel">
+              <div *ngFor="let pic of pictures" class="item" id= {{[pictures.indexOf(pic)]}}>
+                <img src= {{pic}} alt="" srcset="">
+              </div>
+            </main>
+          </body>
+            
+        </div><!-- ==========End Carousel============ -->
+       
+  </div> <!-- End Inner Container-->
+</div>
