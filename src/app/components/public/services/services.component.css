@@ -1,0 +1,14 @@
+.services-section{
+    height: 50rem;
+    position: relative;
+}
+
+.services-wrapper{
+    height: 40rem;
+    border: blue 2px solid;
+    position: relative;
+}
+
+.col{
+    border: red 2px solid;
+}

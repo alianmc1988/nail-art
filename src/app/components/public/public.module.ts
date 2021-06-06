@@ -10,6 +10,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
+import { ListServComponent } from './services/list-serv/list-serv.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AboutComponent } from './about/about.component';
     CarouselComponent,
     PresentationComponent,
     ServicesComponent,
-    AboutComponent
+    AboutComponent,
+    ListServComponent
   ],
   imports: [
     CommonModule,
