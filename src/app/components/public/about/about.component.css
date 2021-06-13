@@ -1,0 +1,12 @@
+
+.imagen{
+    position: relative;
+    
+}
+.imagen img{
+    box-sizing: border-box;
+    image-orientation: center;
+    max-width: 25rem;
+    border-radius: 25px 0;
+    box-shadow: 6px 6px 10px black;
+}

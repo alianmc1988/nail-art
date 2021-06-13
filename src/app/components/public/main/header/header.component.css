@@ -1,4 +1,44 @@
 *{
     color: aliceblue;
 }
+ .nav{
+    border-bottom: 4px solid #b78c33;
+ }
+ 
+.fixed-top{
+    border-bottom: 4px solid #b78c33;
+}
 
+.fixed-top nav{
+   justify-content: right;
+}
+nav i{
+    position: absolute;
+    margin-left: 2rem;
+   
+}
+
+.side-nav-wrapper{
+    position: absolute;
+    background-color: transparent;
+    width: 27rem;
+    left: -25rem;
+    height: 100vh;
+    top: 0;
+    transition: all 500ms;
+}
+
+.side-nav{
+    position: relative;
+    width: 25rem;
+    height: 100vh;
+    border-right: 4px solid #b78c33;
+}
+
+.side-nav-wrapper:hover{
+    left: 0;
+}
+
+.menu-text{
+    border-bottom: 4px solid #b78c33;
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
@@ -14,6 +15,8 @@ import {PublicRoutingModule} from './components/public/public-routing.module'
   ],
   imports: [
     BrowserModule,
+    
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     PublicModule,

@@ -1,10 +1,13 @@
 
 
-h1,h2,h3,span{
+span{
   text-shadow: black 1px 0px 1px;
-
+  
 }
 
+.carousel-wrapper{
+  position: relative;
+}
 body {
     height: 500px;
     margin: 0;

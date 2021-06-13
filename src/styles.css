@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+h2,h3,b{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.3em;
+}
+
+span{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    color: rgb(51, 50, 50);
+}
