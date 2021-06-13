@@ -1,26 +1,36 @@
+<nav class="header bg-dark d-none d-md-block p-3 card">
+    <div class="row header-services container">
+        <div class="col-md-5"><span class="text-white"><b>Nombre del Servicio</b> </span></div>
+        <div class="col-md-5"><span  class="text-white"><b>Descripcion</b></span></div>
+        <div class="col-md-2"><span  class="text-white"><b>Precio</b></span></div>
+    </div>
+</nav>
 
-<div *ngFor="let item of servicios" class="card ">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="service-name">
-                    <span><b>Nombre del Servicio</b> </span>
-                    <p>{{item.service_name}}</p>
+<div class="services-list container">
+    <div *ngFor="let item of servicios" class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="service-name">
+                        <span class="d-flex d-md-none"><b>Nombre del Servicio</b> </span>
+                        <p>{{item.service_name}}</p>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="service-description">
+                        <span class="d-flex d-md-none"><b>Descripcion</b></span>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="service-price ">
+                        <span class="d-flex d-md-none"><b>Precio</b></span>
+                        <p>{{item.price}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="service-description">
-                    <span><b>Descripcion</b></span>
-                    <p>{{item.description}}</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="service-price text-center">
-                    <span><b>Precio</b></span>
-                    <p>{{item.price}}</p>
-                </div>
-            </div>
+            
         </div>
-        
     </div>
 </div>
+
