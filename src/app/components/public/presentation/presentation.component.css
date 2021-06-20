@@ -20,9 +20,10 @@
 
 .title-text{
     position: absolute;
-    display: inline-block;
-    right: 5rem;
-    bottom: 5rem;
+    display: block;
+    top: 10rem;
+    left: 0rem;
+    right: 0rem;
 }
 
 .title-text h1{
@@ -31,7 +32,16 @@
     font-size: 4em;
     display: inline;
     text-shadow: 2px 6px 8px black;
+    border-bottom: 4px solid cornsilk;
 }
+.title-text h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: cornsilk;
+    text-shadow: 2px 6px 8px black;
+}
+
+
+
 
 
 
@@ -39,8 +49,10 @@
     .title-text{
         position: absolute;
         display: inline-block;
+        left: auto;
+        top: auto;
         right: 15rem;
-        bottom: 5rem;
+        bottom: 4rem;
     }
     .title-text h1{
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

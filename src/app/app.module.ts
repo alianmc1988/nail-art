@@ -7,6 +7,8 @@ import { AppComponent } from './components/app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {PublicModule} from  './components/public/public.module';
 import {PublicRoutingModule} from './components/public/public-routing.module'
+import { AlifeFileToBase64Module } from 'alife-file-to-base64';
+import { AdminModule } from './components/admin/admin.module';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {PublicRoutingModule} from './components/public/public-routing.module'
     AppRoutingModule,
     NgbModule,
     PublicModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    AlifeFileToBase64Module,
+    AdminModule
   ],
   providers: [],
   

@@ -11,7 +11,9 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { ListServComponent } from './services/list-serv/list-serv.component';
-
+import { LoginModalComponent } from './login-modal/login-modal.component';
+import{AdminRoutingModule} from '../admin/admin-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,15 @@ import { ListServComponent } from './services/list-serv/list-serv.component';
     PresentationComponent,
     ServicesComponent,
     AboutComponent,
-    ListServComponent
+    ListServComponent,
+    LoginModalComponent
   ],
   imports: [
     CommonModule,
     NgbModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    AdminRoutingModule,
+    ReactiveFormsModule
   ],
   exports:[MainComponent]
 })

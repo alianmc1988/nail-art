@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiciosService} from '../../../../shared/services/servicios.service';
 import {ServiceInterface} from '../../../../shared/interfaces/serviceInterface';
-import { services } from 'src/app/shared/environmentKeys/sharedKeys';
 
 @Component({
   selector: 'app-list-serv',

@@ -7,7 +7,10 @@
     
     <!-- Body -->
     
+    <app-login-modal *ngIf="show"></app-login-modal>
+    
     <body>
+       
         <!-- Presentation component -->
         <section class="presentation">
             <app-presentation></app-presentation>
@@ -40,5 +43,6 @@
     </footer>
     <!-- ============================End footer component=============== -->
 </div>
+<router-outlet></router-outlet>
 
 
