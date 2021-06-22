@@ -14,6 +14,7 @@ import { ListServComponent } from './services/list-serv/list-serv.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
 import{AdminRoutingModule} from '../admin/admin-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     PublicRoutingModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
+  providers:[],
+  
   exports:[MainComponent]
 })
 export class PublicModule { }
