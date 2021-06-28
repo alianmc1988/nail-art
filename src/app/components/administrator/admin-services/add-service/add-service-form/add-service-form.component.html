@@ -1,0 +1,30 @@
+<div class="container add-service-container">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">
+                <h5>Insertar nuevo servicio</h5>
+            </div>
+        </div>
+        <div class="card-body">
+        <div class="container form-wrapper">
+            <form [formGroup] = 'service_to_add' class="form-group">
+                
+                    <input formControlName="service_name" type="text" placeholder="Nombre"  name="service_name" id="service_name">
+               
+                    <br>
+                    <textarea formControlName="description" name="description" id="description" cols="22" rows="4" placeholder="Descripcion"></textarea>
+                
+                    <br>
+                    <input formControlName="price" type="number" placeholder="Precio" name="price" id="price">
+                
+                    <br>
+                    <button class="btn btn-primary btn-block" (click)="sendInfo()">Guardar</button>
+                
+                
+            </form>
+        </div>
+            
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

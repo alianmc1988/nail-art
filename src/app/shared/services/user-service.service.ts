@@ -9,7 +9,8 @@ import { User } from "../interfaces/userInterface";
   providedIn: 'root'
 })
 export class UserServiceService {
-
+  
+  token:string = '';
   constructor( private _http:HttpClient) { }
   
   apiServices_URL = stringConnection+'login';

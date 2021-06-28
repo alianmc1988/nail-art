@@ -6,13 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  show = true;
-  
+  show:boolean = false;
+  logged:boolean = true;
   
   constructor() { }
 
   ngOnInit(): void {
   }
   
-
+  logincatch(e:boolean){
+    this.show = e;
+  }
+  
+  
 }

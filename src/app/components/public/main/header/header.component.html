@@ -18,8 +18,11 @@
     
     <nav class="nav-mobile nav justify-content-center navbar-light bg-dark d-none d-md-flex p-3">
         <a class="nav-link active fa fa-home" href="#"><b>Inicio</b> </a>
-        <a class="nav-link fa fa-book" href="#"><b>Servicios</b> </a>
+        <a class="nav-link fa fa-book" href="#service1"><b>Servicios</b> </a>
         <a class="nav-link fa fa-phone" href="#"><b>Contactenos</b> </a>
+        <a type = "button" class="nav-link fa fa-sign-in" *ngIf="!token" (click)='loginlink()' ><b>Login</b></a>
+        <a type = "button" class="nav-link fa fa-sign-in" *ngIf="token" [routerLink]="['/admin']" ><b>Admin</b></a>
+        
         
     </nav>
     

@@ -3,8 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { UserServiceService } from 'src/app/shared/services/user-service.service';
 import { User } from ".././../../shared/interfaces/userInterface";
-import {map} from 'rxjs/operators'
-import { LoginResponse } from 'src/app/shared/interfaces/responseLoginInterface';
 
 @Component({
   selector: 'app-login-modal',
@@ -14,7 +12,7 @@ import { LoginResponse } from 'src/app/shared/interfaces/responseLoginInterface'
 export class LoginModalComponent implements OnInit {
 
   loginForm: FormGroup;
-
+  token:string = "";
   constructor(private _formBuilder:FormBuilder, private _router:Router, private _userService:UserServiceService) {
     this.loginForm = this._formBuilder.group({
       email: ['', Validators.compose([Validators.email,Validators.required])],
@@ -35,8 +33,9 @@ export class LoginModalComponent implements OnInit {
     }
     const data:User = this.loginForm.value;
     this._userService.login(data).subscribe(
-      data=>{
-      console.log('Successful', data); 
+     data=>{
+      this.token = data.token;
+      window.localStorage.setItem('token',this.token);
       this._router.navigate(['/admin']);
       },
       error=>console.error(error)

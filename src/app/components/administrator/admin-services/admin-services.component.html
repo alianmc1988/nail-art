@@ -1,0 +1,78 @@
+<div class="container mt-5">
+  <div class="servicesMannager-wrapper">
+    <div class="container buscador-container formControl">
+      <form >
+        <div class="row">
+          <div class="col md-8">
+            <h3>Control de servicios</h3>
+          </div>
+          <div class="col-md-4">
+            <input type="text" name="finder" id="finder" placeholder="busqueda">
+            <i class="fas fa-serch">buscar</i>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="services mt-5">
+      <div class="list-service-wrapper">
+        <div class="row t-header bg-dark text-white p-2">
+            <div class="col-md-3">Nombre</div>
+            <div class="col-md-5">Descripcion</div>
+            <div class="col-md-2">Precio</div>
+            <div class="col-md-2 text-center">Edit</div>
+            
+          <!-- Listar los servicios con boton de editar y eliminar -->          
+          </div>
+            <div class="lista-container">
+            <div class="container formToEdit  m-3" *ngIf="show_edit_form">
+              <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h5>Insertar nuevo servicio</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                <div class="container form-wrapper">
+                    <form  class="form-group">
+                        
+                            <input type="text" placeholder="Nombre"  name="service_name" id="service_name" [value]='temp_service.service_name' >
+                       
+                            <br>
+                            <textarea  name="description" id="description" cols="22" rows="4" placeholder="Descripcion" [value]='temp_service.description'></textarea>
+                        
+                            <br>
+                            <input  type="number" placeholder="Precio" name="price" id="price" [value]='temp_service.price'>
+                        
+                            <br>
+                            <button class="btn btn-primary btn-block" (click)="editService()">Guardar</button>
+                        
+                        
+                    </form>
+                </div>
+                    
+                </div>
+            </div>
+            </div>
+            
+            
+            
+             <div *ngIf="!show_edit_form" class="lista ">
+              <div class="row t-body bg-light p-2 mb-3 list" *ngFor="let service of services">
+                <div class="col-md-3">{{service.service_name}}</div>
+                <div class="col-md-5">{{service.description}}</div>
+                <div class="col-md-2">{{service.price}}</div>
+                <div class="col-md-1"><i type="button" class="btn btn-info" aria-hidden="true" (click)="openToEdit(service)">edit</i></div>
+                <div class="col-md-1"><i type="button" class="btn btn-danger" aria-hidden="true" (click)="removeService(service._id)">Borrar</i></div>
+              </div>
+             </div>
+          </div>
+            
+      </div>
+    </div>
+    <div class="add-service mt-3">
+      <app-add-service ></app-add-service>
+    </div>
+      
+    </div>
+  </div>
+  

@@ -1,13 +1,14 @@
 <!-- Header component -->
 <div>
     <header>
-        <app-header></app-header>
+        <app-header (loginShow)= 'logincatch($event)'></app-header>
+        
     </header>
     <!-- ================End Header================================ -->
     
     <!-- Body -->
     
-    <app-login-modal *ngIf="show"></app-login-modal>
+    <app-login-modal *ngIf="show" ></app-login-modal>
     
     <body>
        
@@ -24,7 +25,7 @@
         <!-- =================End Carousel component===================== -->
         
         <!-- services component -->
-        <section class="services-section">
+        <section class="services-section" id="service1">
             <app-services></app-services>
         </section>
         <!-- =================End Services component===================== -->
@@ -34,15 +35,21 @@
             <app-about></app-about>
         </section>
         <!-- ================End About component========================= -->
+    
     </body>
     <!-- =============================End Body=========================== -->
     
+   
     <!-- footer component -->
     <footer>
         <app-footer></app-footer>
     </footer>
-    <!-- ============================End footer component=============== -->
 </div>
-<router-outlet></router-outlet>
+
+
+
+
+
+
 
 

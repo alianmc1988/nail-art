@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nail-art';
+  show:boolean = false;
+  
+  logincatch(e:boolean){
+    this.show = e;
+  }
 }

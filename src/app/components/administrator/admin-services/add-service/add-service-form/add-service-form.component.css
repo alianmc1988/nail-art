@@ -1,0 +1,8 @@
+.add-service-container{
+    max-width: 300px;
+}
+
+input,textarea{
+    margin-bottom: 10px;
+    width: 100%;
+}
