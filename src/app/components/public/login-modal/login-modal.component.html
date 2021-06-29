@@ -1,19 +1,25 @@
-<div class="container login-section ">
+<div class="container login-section">
     <div class="card login-wrapper">
-        <div class="card-body body-wrapper">
+        <div class="card-title card-header">
             <div class="text-header text-center">
                 <div class="text-holder">
                     <h2>Login</h2>
                 </div>
                 
             </div>
+        </div>
+        <div class="card-body body-wrapper">
+            
             <div class="form-login">
                 <form [formGroup]="loginForm" class="form text-center" >
+                <div class="container p-5">
                     <label class="mt-3" for="email">Email</label><br>
-                    <input  formControlName="email" type="email" name="email" id="email"  ><br>
+                    <input class="mb-3" formControlName="email" type="email" name="email" id="email"  ><br>
                     <label class="mt-3" for="password">Contraseña</label><br>
                     <input formControlName="password" type="password" name="password" id="password"><br>
-                    <button class="button-login btn btn-primary mt-5" (click)="sendLogin()" [disabled]="loginForm.invalid" >Enviar</button>
+                    <button class="button-login btn btn-primary mt-5 " (click)="sendLogin()" [disabled]="loginForm.invalid" >Enviar</button>
+                </div>
+                    
                 </form>
             </div>
         </div>

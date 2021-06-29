@@ -38,7 +38,13 @@ export class LoginModalComponent implements OnInit {
       window.localStorage.setItem('token',this.token);
       this._router.navigate(['/admin']);
       },
-      error=>console.error(error)
+      error=>{
+        if(error.status == 403){
+          alert('contraseña invalida')
+        }else if (error.status == 404) {
+          alert('email incorrecto')
+        }
+      }
     )
   }
   

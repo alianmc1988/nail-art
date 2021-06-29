@@ -15,16 +15,12 @@ export class AdminServicesComponent implements OnInit {
   services:ServiceInterface[] = []; //List of services to use in template
   service_to_change = {}; //Object service already edited to save in DB
   show_edit_form = false; //Flag for edit form to show
-  //service_to_edit: FormGroup;
+  
   temp_service:ServiceInterface | any;
   
   
   constructor(private _servicio:ServiciosService, private _router:Router, private _builder:FormBuilder) {
-    // this.service_to_edit = this._builder.group({
-    //   service_name:['',[Validators.required,Validators.maxLength(20)]],
-    //   description:['',[Validators.required,Validators.maxLength(100)]],
-    //   price:['',Validators.required] 
-    // })
+  
   }
 
   ngOnInit(): void {
