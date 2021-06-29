@@ -11,6 +11,33 @@
                 <h4>Menu</h4>
               </div>
             </div>
+            <div class="container list-nav-wrapper mt-5">
+              <ul>
+                <div class="list-nav">
+                  <li><a href="#">Inicio</a></li>
+                </div><br>
+                <br>
+                <div class="list-nav">
+                  <li><a href="#">Quienes Somos</a></li>
+                </div><br>
+                <div class="list-nav">
+                  <li><a href="#service1">Nuestros Servicios</a></li>
+                </div><br>
+                <div class="list-nav">
+                  <li><a href="#about-section">La Artista</a></li>
+                </div><br>
+                <div class="list-nav">
+                  <li><a href="#contact">Contactenos</a></li>
+                </div><br>
+                <br>
+                <div class="list-nav" *ngIf="!token">
+                  <li><a type="button"  (click)='loginlink()'>Login</a></li>
+                </div>
+                <div class="list-nav" *ngIf="token">
+                  <li><a [routerLink]="['/admin']" >Admin</a></li>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -19,7 +46,7 @@
     <nav class="nav-mobile nav justify-content-center navbar-light bg-dark d-none d-md-flex p-3">
         <a class="nav-link active fa fa-home" href="#"><b>Inicio</b> </a>
         <a class="nav-link fa fa-book" href="#service1"><b>Servicios</b> </a>
-        <a class="nav-link fa fa-phone" href="#"><b>Contactenos</b> </a>
+        <a class="nav-link fa fa-phone" href="#contact"><b>Contactenos</b> </a>
         <a type = "button" class="nav-link fa fa-sign-in" *ngIf="!token" (click)='loginlink()' ><b>Login</b></a>
         <a type = "button" class="nav-link fa fa-sign-in" *ngIf="token" [routerLink]="['/admin']" ><b>Admin</b></a>
         
