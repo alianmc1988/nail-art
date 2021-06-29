@@ -7,12 +7,17 @@
     background-color: transparent;
     z-index: 100;
     top:10%;
-    max-width: 30rem;
-    
+    max-width: 100%;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .login-wrapper{
     background-color: rgba(0, 0, 0, 0.842);
+    max-width: 30rem;
+    margin: auto;
 }
 
 .text-holder{
